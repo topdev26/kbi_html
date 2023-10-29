@@ -1,0 +1,15 @@
+E:\BruceKhin\Upwork\KBI\WinHtmlEditorTest\bin\Debug\WinHtmlEditorTest.exe.config
+E:\BruceKhin\Upwork\KBI\WinHtmlEditorTest\bin\Debug\WinHtmlEditorTest.exe
+E:\BruceKhin\Upwork\KBI\WinHtmlEditorTest\bin\Debug\WinHtmlEditorTest.pdb
+E:\BruceKhin\Upwork\KBI\WinHtmlEditorTest\bin\Debug\WinHtmlEditor.dll
+E:\BruceKhin\Upwork\KBI\WinHtmlEditorTest\bin\Debug\Microsoft.mshtml.dll
+E:\BruceKhin\Upwork\KBI\WinHtmlEditorTest\bin\Debug\NetSpell.SpellChecker.dll
+E:\BruceKhin\Upwork\KBI\WinHtmlEditorTest\bin\Debug\WinHtmlEditor.pdb
+E:\BruceKhin\Upwork\KBI\WinHtmlEditorTest\obj\x86\Debug\WinHtmlEditorApplication.csproj.AssemblyReference.cache
+E:\BruceKhin\Upwork\KBI\WinHtmlEditorTest\obj\x86\Debug\WinHtmlEditorTest.Form1.resources
+E:\BruceKhin\Upwork\KBI\WinHtmlEditorTest\obj\x86\Debug\WinHtmlEditorTest.Properties.Resources.resources
+E:\BruceKhin\Upwork\KBI\WinHtmlEditorTest\obj\x86\Debug\WinHtmlEditorApplication.csproj.GenerateResource.cache
+E:\BruceKhin\Upwork\KBI\WinHtmlEditorTest\obj\x86\Debug\WinHtmlEditorApplication.csproj.CoreCompileInputs.cache
+E:\BruceKhin\Upwork\KBI\WinHtmlEditorTest\obj\x86\Debug\WinHtmlEditorApplication.csproj.CopyComplete
+E:\BruceKhin\Upwork\KBI\WinHtmlEditorTest\obj\x86\Debug\WinHtmlEditorTest.exe
+E:\BruceKhin\Upwork\KBI\WinHtmlEditorTest\obj\x86\Debug\WinHtmlEditorTest.pdb
