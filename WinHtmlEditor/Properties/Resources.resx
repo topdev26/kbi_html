@@ -112,12 +112,12 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="InsertImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\InsertImage.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -224,36 +224,19 @@
     <value>..\Resources\Wordclean.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AboutInfo" xml:space="preserve">
-    <value>这是一个免费的HTML控件，你可以自由使用。
-如有任何问题或建议请加入QQ群：217478320，开源项目请访问：http://tewuapple.github.com/WinHtmlEditor/,是否现在就访问？
-WinHtmlEditor
-版本:1.0.0
-快捷键	功能
-ctrl+b	给选中字设置为加粗
-ctrl+c	复制选中内容
-ctrl+x	剪切选中内容
-ctrl+v	粘贴
-ctrl+y	重新执行上次操作
-ctrl+z	撤销上一次操作
-ctrl+i	给选中字设置为斜体
-ctrl+u	给选中字加下划线
-ctrl+a	全部选中
-shift+enter	软回车</value>
+    <value>KBI HTML GENERATOR</value>
   </data>
   <data name="AboutText" xml:space="preserve">
-    <value>关于</value>
+    <value>About Text</value>
   </data>
   <data name="SaveFilter" xml:space="preserve">
-    <value>HTML文件|*.html|SHTML文件|*.shtml|HTM文件|*.htm|文本文件|*.txt</value>
+    <value>HTML Files|*.html</value>
   </data>
   <data name="SaveTitle" xml:space="preserve">
-    <value>保存文件</value>
-  </data>
-  <data name="OpenFilter" xml:space="preserve">
-    <value>支持文件|*.html;*.shtml;*.txt;*.htm|所有文件|*.*</value>
+    <value>Save File</value>
   </data>
   <data name="OpenTitle" xml:space="preserve">
-    <value>请选择文件</value>
+    <value>Open HTML File</value>
   </data>
   <data name="StrikeThrough" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\StrikeThrough.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -268,7 +251,7 @@ shift+enter	软回车</value>
     <value>..\Resources\Preview.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="strInsertTable" xml:space="preserve">
-    <value>插入表格</value>
+    <value>Insert table</value>
   </data>
   <data name="AutoLayout" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AutoLayout.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -278,5 +261,8 @@ shift+enter	软回车</value>
   </data>
   <data name="ForeColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ForeColor.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OpenFilter" xml:space="preserve">
+    <value>HTML Files|*.html;*.shtml;*.txt;*.htm</value>
   </data>
 </root>

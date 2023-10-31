@@ -211,7 +211,7 @@ namespace WinHtmlEditor
             // default values used to reset values
             _defaultBodyBackColor = Color.White;
             _defaultBodyForeColor = Color.Black;
-            _defaultFont = new HtmlFontProperty(Font);
+            _defaultFont = new HtmlFontProperty("Arial");
             _navigateWindow = NavigateActionOption.Default;
             _scrollBars = DisplayScrollBarOption.Auto;
             _autoWordWrap = true;
@@ -231,7 +231,6 @@ namespace WinHtmlEditor
             // after load ensure document marked as editable
             ReadOnly = _readOnly;
             ScrollBars = _scrollBars;
-
             SetupComboFontSize();
             SynchFont(string.Empty);
         }
@@ -972,7 +971,6 @@ namespace WinHtmlEditor
             {
                 body.contentEditable = "false";
                 cmsHtml.Enabled = false;
-                tsbPreview.Enabled = true;
             }
             else
             {
@@ -2286,20 +2284,12 @@ namespace WinHtmlEditor
                 return;
             SetupKeyListener();
             tsbBold.Checked = IsBold();
-            tsbItalic.Checked = IsItalic();
-            tsbUnderline.Checked = IsUnderline();
-            tsbStrikeThrough.Checked = IsStrikeThrough();
-            tsbInsertOrderedList.Checked = IsOrderedList();
-            tsbInsertUnorderedList.Checked = IsUnorderedList();
             tsbJustifyLeft.Checked = IsJustifyLeft();
             tsbJustifyCenter.Checked = IsJustifyCenter();
             tsbJustifyRight.Checked = IsJustifyRight();
             tsbJustifyFull.Checked = IsJustifyFull();
-            tsbSubscript.Checked = IsSubscript();
-            tsbSuperscript.Checked = IsSuperscript();
             tsbUndo.Enabled = IsUndo();
             tsbRedo.Enabled = IsRedo();
-            tsbUnlink.Enabled = IsUnlink();
             UpdateFontComboBox();
             UpdateFontSizeComboBox();
         }
@@ -2372,12 +2362,12 @@ namespace WinHtmlEditor
 
         private void DropDown_Opening(object sender, CancelEventArgs e)
         {
-            var c = tsddbInsertTable.DropDown as ToolStripTableSizeSelector;
-            if (c != null)
-            {
-                c.Selector.SelectedSize = new Size(0, 0);
-                c.Selector.VisibleRange = new Size(10, 10);
-            }
+            //var c = tsddbInsertTable.DropDown as ToolStripTableSizeSelector;
+            //if (c != null)
+            //{
+            //    c.Selector.SelectedSize = new Size(0, 0);
+            //    c.Selector.VisibleRange = new Size(10, 10);
+            //}
         }
 
         /// <summary>
@@ -2389,7 +2379,6 @@ namespace WinHtmlEditor
             var dropDown = new ToolStripTableSizeSelector();
             dropDown.Opening += DropDown_Opening;
             dropDown.Selector.TableSizeSelected += Selector_TableSizeSelected;
-            tsddbInsertTable.DropDown = dropDown;
             var tsmiInsertTable = new ToolStripMenuItem
                 {
                     Image = Resources.InsertTable,
@@ -2399,7 +2388,6 @@ namespace WinHtmlEditor
                     Tag = "InsertTable"
                 };
             tsmiInsertTable.Click += tsmiInsertTable_Click;
-            tsddbInsertTable.DropDownItems.Add(tsmiInsertTable);
 
             string removeButton = ConfigurationManager.AppSettings["removeButtons"];
             if (!removeButton.IsNullOrEmpty())
@@ -2640,13 +2628,13 @@ namespace WinHtmlEditor
         private bool _internalCall;
         private void SetupComboFontSize()
         {
-            tscbFontSize.Items.Add("1 (8 pt)");
+            //tscbFontSize.Items.Add("1 (8 pt)");
             tscbFontSize.Items.Add("2 (10 pt)");
             tscbFontSize.Items.Add("3 (12 pt)");
             tscbFontSize.Items.Add("4 (14 pt)");
-            tscbFontSize.Items.Add("5 (18 pt)");
-            tscbFontSize.Items.Add("6 (24 pt)");
-            tscbFontSize.Items.Add("7 (36 pt)");
+            tscbFontSize.Items.Add("5 (16 pt)");
+            //tscbFontSize.Items.Add("6 (24 pt)");
+            //tscbFontSize.Items.Add("7 (36 pt)");
             tscbFontSize.Click += tscbFontSize_Click;
             tscbFontSize.SelectedIndexChanged += tscbFontSize_SelectedIndexChanged;
         }
@@ -2686,17 +2674,17 @@ namespace WinHtmlEditor
                         case 4:
                             FontSize = FontSize.Four;
                             break;
-                        case 5:
-                            FontSize = FontSize.Five;
-                            break;
-                        case 6:
-                            FontSize = FontSize.Six;
-                            break;
-                        case 7:
-                            FontSize = FontSize.Seven;
-                            break;
-                        default:
-                            FontSize = FontSize.Seven;
+                        //case 5:
+                        //    FontSize = FontSize.Five;
+                        //    break;
+                        //case 6:
+                        //    FontSize = FontSize.Six;
+                        //    break;
+                        //case 7:
+                        //    FontSize = FontSize.Seven;
+                        //    break;
+                        //default:
+                        //    FontSize = FontSize.Seven;
                             break;
                     }
                     Focus();
@@ -2971,7 +2959,7 @@ namespace WinHtmlEditor
                         foo = -1;
                         break;
                     default:
-                        foo = 2;
+                        foo = 0;
                         break;
                 }
                 //string fontsize = Convert.ToString(foo);
@@ -3019,6 +3007,8 @@ namespace WinHtmlEditor
                     return FontSize.NA;
                 switch (QueryCommandRange(HTML_COMMAND_FONTSIZE).ToString())
                 {
+                    //case "1":
+                    //    return FontSize.One;
                     case "1":
                         return FontSize.One;
                     case "2":
@@ -3027,12 +3017,10 @@ namespace WinHtmlEditor
                         return FontSize.Three;
                     case "4":
                         return FontSize.Four;
-                    case "5":
-                        return FontSize.Five;
-                    case "6":
-                        return FontSize.Six;
-                    case "7":
-                        return FontSize.Seven;
+                    //case "6":
+                    //    return FontSize.Six;
+                    //case "7":
+                    //    return FontSize.Seven;
                     default:
                         return FontSize.NA;
                 }
@@ -3045,35 +3033,23 @@ namespace WinHtmlEditor
                 {
                     case FontSize.One:
                         sz = 1;
-                        text = "1 (8 pt)";
+                        text = "2 (10 pt)";
                         break;
                     case FontSize.Two:
                         sz = 2;
-                        text = "2 (10 pt)";
+                        text = "3 (12 pt)";
                         break;
                     case FontSize.Three:
                         sz = 3;
-                        text = "3 (12 pt)";
+                        text = "4 (14 pt)";
                         break;
                     case FontSize.Four:
                         sz = 4;
-                        text = "4 (14 pt)";
-                        break;
-                    case FontSize.Five:
-                        sz = 5;
-                        text = "5 (18 pt)";
-                        break;
-                    case FontSize.Six:
-                        sz = 6;
-                        text = "6 (24 pt)";
-                        break;
-                    case FontSize.Seven:
-                        sz = 7;
-                        text = "7 (36 pt)";
+                        text = "5 (16 pt)";
                         break;
                     default:
-                        sz = 7;
-                        text = "7 (36 pt)";
+                        sz = 0;
+                        text = "2 (10 pt)";
                         break;
                 }
                 if (!wb.Document.IsNull())
@@ -3578,7 +3554,7 @@ namespace WinHtmlEditor
                         break;
                     case INTERNAL_COMMAND_BACKCOLOR:
                         // BACKCOLOR style creation
-                        FormatBackColor(tscpBackColor.Color);
+                        //FormatBackColor(tscpBackColor.Color);
                         break;
                     case INTERNAL_COMMAND_STRIKETHROUGH:
                         // Selection STRIKETHROUGH command
@@ -3826,7 +3802,16 @@ namespace WinHtmlEditor
             var tscp = (ToolStripColorPicker)sender;
             var command = (string)tscp.Tag;
             ProcessCommand(command);
-        } 
-        
+        }
+
+        private void tsmiInsertImage_Click(object sender, EventArgs e)
+        {
+            ExecuteCommandDocumentPrompt(HTML_COMMAND_INSERT_IMAGE);
+        }
+
+        private void tsmiShowMockup_Click(object sender, EventArgs e)
+        {
+            ShowHTML();
+        }
     }
 }

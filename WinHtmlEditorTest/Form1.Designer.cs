@@ -35,19 +35,22 @@
             // 
             // htmlEditor1
             // 
+            this.htmlEditor1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.htmlEditor1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.htmlEditor1.BodyInnerHTML = null;
             this.htmlEditor1.BodyInnerText = null;
             this.htmlEditor1.EnterToBR = false;
-            this.htmlEditor1.FontSize = WinHtmlEditor.FontSize.Three;
-            this.htmlEditor1.Location = new System.Drawing.Point(3, 0);
+            this.htmlEditor1.FontSize = WinHtmlEditor.FontSize.One;
+            this.htmlEditor1.Location = new System.Drawing.Point(3, 3);
             this.htmlEditor1.Name = "htmlEditor1";
             this.htmlEditor1.ShowStatusBar = true;
             this.htmlEditor1.ShowToolBar = true;
             this.htmlEditor1.ShowWb = true;
-            this.htmlEditor1.Size = new System.Drawing.Size(789, 591);
             this.htmlEditor1.TabIndex = 0;
             this.htmlEditor1.WebBrowserShortcutsEnabled = true;
+            this.htmlEditor1.Load += new System.EventHandler(this.htmlEditor1_Load);
             // 
             // tableLayoutPanel1
             // 
@@ -56,14 +59,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.htmlEditor1, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.110818F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(792, 594);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(993, 597);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // Form1
@@ -72,7 +74,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1019, 607);
+            this.ClientSize = new System.Drawing.Size(1008, 607);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.Text = "Form1";
